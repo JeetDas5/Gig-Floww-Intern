@@ -1,1 +1,32 @@
 @import "tailwindcss";
+
+@layer base {
+  /* Light Theme */
+  :root {
+    --fg: #1e1e1e;
+    --bg: #ffffff;
+    --primary: #58c9b9;
+    --primary-hover: #3aa69d;
+    --accent: #ffffff;
+    --heading-font: 'Poppins', sans-serif;
+    --body-font: 'Inter', sans-serif;
+  }
+
+
+
+  body {
+    background: var(--bg);
+    color: var(--fg);
+    font-family: var(--body-font);
+    @apply transition-colors duration-300;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--heading-font);
+    @apply font-bold text-[var(--fg)];
+  }
+
+  a {
+    @apply text-[var(--primary)] hover:text-[var(--primary-hover)] transition-colors;
+  }
+}

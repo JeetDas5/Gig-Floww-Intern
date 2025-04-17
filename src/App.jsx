@@ -1,11 +1,21 @@
-import "./App.css";
+import Navbar from "./components/Navbar";
+import Hero from "./sections/Hero";
+import About from "./sections/About";
+import Features from "./sections/Features";
+import Testimonials from "./sections/Testimonials";
+import SignUpForm from "./sections/SignUpForm";
 
-function App() {
+export default function App() {
   return (
-    <>
-      <div>App</div>
-    </>
+    <div>
+      <Navbar />
+      <main>
+        <Hero />
+        <About />
+        <Features />
+        <Testimonials />
+        <SignUpForm />
+      </main>
+    </div>
   );
 }
-
-export default App;
